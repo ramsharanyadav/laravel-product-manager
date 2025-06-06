@@ -40,6 +40,8 @@ A Laravel-based web application for managing products with AJAX form submission,
    git clone https://github.com/yourusername/laravel-product-manager.git
    cd laravel-product-manager
 
+   chmod -R 777 storage bootstrap/cache
+
 2. **Install PHP dependencies**
     ```bash
     composer install
@@ -49,16 +51,16 @@ A Laravel-based web application for managing products with AJAX form submission,
 
     cp .env.example .env
 
-    Set session and cache to file in .env 
+4. **Create products file**
+    ```bash
+    php artisan tinker
+>>> Storage::put('products.json', '[]');
 
-    SESSION_DRIVER=file
-    CACHE_DRIVER=file
-
-4. **Start the Laravel server**
+5. **Start the Laravel server**
     ```bash
     php artisan serve 
 
-    visit to browser
+    visit to server running port
 
 
 
