@@ -45,22 +45,21 @@ A Laravel-based web application for managing products with AJAX form submission,
 2. **Install PHP dependencies**
     ```bash
     composer install
-    php artisan key:generate
 
-3. **Create .env file**
+3. **Create .env file, key generation and create products file**
 
     cp .env.example .env
 
-4. **Create products file**
-    ```bash
+    php artisan key:generate
+
     php artisan tinker
->>> Storage::put('products.json', '[]');
+    > Storage::put('products.json', '[]')
 
-5. **Start the Laravel server**
+4. **Run the local development server**
     ```bash
-    php artisan serve 
+    php artisan serve
 
-    visit to server running port
-
-
+5. **Now open your browser and go to: **
+    ```
+    http://127.0.0.1:8000/
 
